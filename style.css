@@ -109,9 +109,6 @@ section{
     width: fit-content;
     animation: scroll 30s linear infinite;
 }
-.tech-wrapper:hover .grandson {
-    animation-play-state: paused;
-}
 @keyframes scroll {
     from {
         transform: translateX(0);
