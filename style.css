@@ -91,14 +91,14 @@ section{
     justify-content: center;
 }
 .child{
-    width: min(100%, 600px);
-    min-height: 700px;
+    margin: auto;
+    margin-top: 20px;
+    width: min(100%, 900px);
+    min-height: 600px;
     background-color:  #040d1f;
-    margin: 30px;
     text-align: center;
     border: 5px solid;
     border-radius: 30px;
-
 }
 #fpf{
     margin-top: 20px;
@@ -167,18 +167,17 @@ section{
 }
 
 .project-div{
-    margin: 50px;
     gap: 50px;
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    width: (1000px, 80%);
+    width: (1000px, 100%);
 }
 .project-box{
     margin: auto;
     border: 5px solid rgb(229, 215, 215);
     height: 500px;
-    width: 400px;
+    width: min(100%, 400px);
     background-color: #09031b;
     border-radius: 10%;
     text-align: center;
@@ -228,9 +227,8 @@ section{
 
 }
 .cert-img{
-    width: auto;
     background-color: wheat;
-    height: 400px;
+    height: 300px;
     width: min(90%, 600px);
     margin: 20px;
 }
@@ -259,18 +257,19 @@ section{
     color: #f5f7fa;
     text-decoration: none;
     text-align: center;
-    background-color: #040622;
+    background-color: #0d1142;
     height: 100px;
-    width: min(20%,300px);
+    width: min(23%,400px);
     font-size: 0;
     border: 2px solid white;
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .contacts a:hover{
+    margin-top: 10px;
     background-color: #1ddede;
-    border-radius: 30px;
-    font-size: 20px;
+    border-radius: 10px;
+    font-size: 40px;
     
 }
 .contact-btn{
@@ -280,17 +279,9 @@ section{
     display: flex;
     flex-wrap: wrap;
 }
-
-.contact-hover{
-    font-size: 20px;
-    opacity: 0;
-}
-.contact-hover:hover{
-    opacity: 100;
-}
 .contact-icons{
     margin: auto;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
 }
