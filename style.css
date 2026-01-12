@@ -5,6 +5,8 @@ body{
 html{
     scroll-behavior: smooth;
 }
+
+
 section{
 
     scroll-margin-top: 100px; /* same as nav height */
@@ -17,7 +19,7 @@ section{
     z-index: 1000;
     width: min(90%, 500px);
     height: 60px;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border: 2px solid;
     border-radius: 20px;
     display: flex;
@@ -39,21 +41,14 @@ section{
     list-style: none;
     margin: auto;
 }
-#nav-link{
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.5rem;
+.navs a{
+    margin: 20px;
+}
+.nav-icons{
+    width: auto;
+    height: 50px;
     margin: auto;
-    color: #000407;
-    font-family: Arial, Helvetica, sans-serif;
 }
-#nav-link:hover{
-    background-color: #140303;
-    color: aliceblue;
-    border-radius: 10px;
-}
-
-
 .greet{
     margin: auto;
     text-align: center;
@@ -186,12 +181,56 @@ section{
     border-radius: 60px;
 }
 
-
-
 #sec-name{
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     color: #1ddede;
     text-shadow: 2px 4px 10px rgb(180, 178, 178);
+}
+
+.contacts{
+    margin: auto;
+}
+.contacts a{
+    margin: auto;
+    color: #f5f7fa;
+    text-decoration: none;
+    text-align: center;
+    background-color: #162c2c;
+    height: 60px;
+    width: 60px;
+    font-size: 0;
+    background-color: #054f4f;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contacts a:hover{
+    background-color: #1ddede;
+    border-radius: 30px;
+    width: 120px;
+    opacity: 100;
+    font-size: 24px;
+    
+}
+.contact-btn{
+    padding: 40px;
+    margin: auto;
+    width: (1000px, 50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-hover{
+    font-size: 20px;
+    opacity: 0;
+}
+.contact-hover:hover{
+    opacity: 100;
+}
+.contact-icons{
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
