@@ -6,10 +6,14 @@ body{
 html{
     scroll-behavior: smooth;
 }
+hr{
+    color: black;
+    border: 1px solid;
+}
 footer{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: #1ddede;
+    color: #071616;
 }
 @keyframes bgcolor{
     from{background-color: #0b1a2c;}
@@ -45,30 +49,17 @@ section{
     color: #8a9be0;
     text-decoration: underline;
 }
-@media(max-width: 600px){
-    .navs{
-        max-height: 100px;
-    }
-    .menu a{
-    margin-left: 0px;
-    text-decoration: none;
-    color: black;
-    font-size: 0.5em;
-    }
-    .my-logo img{
-        display: block;
-        height: 40px;
-    }
-}
+
 
 .greet-box{
     width: min(90%, auto);
     padding: 50px;
+    padding: 0 15rem;
     margin-bottom: 280px;
 }
 .greet-you{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #a4ccef;
+    color: #031728;
     font-size: 80px;
 }
 .greet{
@@ -78,7 +69,7 @@ section{
 }
 #short-desc{
     font-family: Arial, Helvetica, sans-serif;
-    color: #1ddede;
+    color: #6b7272;
     font-size: 30px;
 }
 .html{
@@ -88,10 +79,6 @@ section{
     from{color: rgb(239, 216, 97);}
     to {color: rgb(12, 253, 233);}
 }
-#short-desc:hover{
-    transform: scale(1.05);
-}
-
 .profile{
     margin-top: 60px;
     width: 100%;
@@ -198,42 +185,44 @@ section{
     border: 5px solid rgb(229, 215, 215);
     height: 300px;
     width: min(50%, 300px);
-    background-color: #09031b;
-    border-radius: 10%;
+    background-color: #c4bfd5;
+    border-radius: 5%;
     text-align: center;
 }
 .project-box:hover{
-    background-color: #2f3b68;
+    background-color: #f5f5fb;
+    opacity: 30%;
 
 }
 .project-logo{
     background:blue ;
     height: 50%;
-    width: min(90%,50%);
+    width: 70%;
     margin: auto;
-    margin-top: 10px;
-    border-radius: 10%;
+    margin-top: 20px;
+    border-radius: 5%;
 }
 .project-text{
-    color:#1ddede;
+    color:#070d0d;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
 }
 .project-link{
     margin: auto;
     display: block;
-    background-color: #1e6a6a;
+    background-color: #061919;
     width: min(60%, 100px);
     height: 30px;
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     border: 2px solid #f5f7fa;
-    border-radius: 20px;
-    color: #1191f9;
+    border-radius: 10px;
+    color: #a7b0b7;
 }
 .project-link:hover{
-    background-color: #094aa0;
+    background-color: #0c192c;
+    opacity: 100%;
 }
 .certs{
     text-align: center;
@@ -245,7 +234,6 @@ section{
     overflow: auto;
 }
 .cert-img{
-    background-color: wheat;
     height: 300px;
     width: min(90%, 600px);
     margin: 20px;
@@ -264,19 +252,20 @@ section{
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 2.3rem;
-    color: #1ddede;
+    color: #141919;
 }
 
 .contacts{
     margin: auto;
 }
 .contacts a{
+    margin-top: 10px;
     margin: auto;
     color: #f5f7fa;
     text-decoration: none;
     text-align: center;
-    background-color: #0d1142;
-    height: 100px;
+    background-color: #5f6498;
+    height: 80px;
     width: min(23%,400px);
     font-size: 0;
     border: 2px solid white;
@@ -284,10 +273,13 @@ section{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .contacts a:hover{
-    margin-top: 10px;
+    padding: 0 1em;
     background-color: #1ddede;
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 .contact-btn{
@@ -302,4 +294,165 @@ section{
     height: 80px;
     width: 80px;
     border-radius: 50%;
+}
+
+
+@media(max-width: 600px){
+    .navs{
+        max-height: 100px;
+    }
+    .menu a{
+        margin-left: 0px;
+        text-decoration: none;
+        color: black;
+        font-size: 0.5em;
+    }
+    .greet-box{
+        padding: 0 5em;
+    }
+    .my-logo img{
+        display: block;
+        height: 40px;
+    }
+    .greet-you{
+        font-size: 3rem;
+    }
+    #short-desc{
+        font-size: 1rem;
+    }
+
+
+    .profile{
+        margin-top: 60px;
+        width: 100%;
+    }
+    .child{
+        margin-top: 20px;
+        width: 80%;
+        height: 400px;
+    }
+    #fpf{
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
+        border: 5px solid rgb(100, 254, 251);
+        border-radius: 50%;
+    }
+    #name{
+        font-size: 1em;
+        color: #d8e6f5;
+    }
+    #bio{
+        color: #64acfd;
+        font-size: 15px;
+    }
+    .tech-wrapper {
+        width: 100%;
+        overflow: hidden;
+        padding: 0 0;
+    }
+
+    .grandson {
+        gap: 20px;
+
+    }
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+    .ts {
+        height: 50px;
+    }
+    #quote{
+        font-size: 1rem;
+    }
+    #educ, #tech{
+        font-size: 1/2rem;
+        margin-bottom: 20px;
+        color: #64acfd;
+        text-shadow: 1px 1px seashell;
+    }
+    #educ{
+        margin-bottom: 10px;
+    }
+    .educ-box{
+        border-left: 3px solid #1191f9;
+        margin-left: 30%;
+    }
+    #education-line, #educ-year{
+        margin: 10px;
+
+    }
+    #educ-year{
+        font-size: 15px;
+    }
+    .project-box{
+        height: 300px;
+        width: 80%;
+        border-radius: 5%;
+    }
+    .project-logo{
+        background:blue ;
+        height: 60%;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 5%;
+    }
+    .project-text{
+        font-size: 1rem;
+    }
+    .project-link{
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    .cert-img{
+        height: 200px;
+        width: 90%;
+        margin: 20px;
+    }
+
+    .contacts{
+        margin: auto;
+    }
+    .contacts a{
+        margin: auto;
+        height: 50px;
+        font-size: 0px;
+        width: auto;
+
+    }
+    .contacts a:hover{
+        background-color: #1ddede;
+        font-size: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3em;
+        
+    }
+    .contact-btn{
+        padding: 20px;
+        margin: auto;
+        height: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact-icons{
+        margin: auto;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    footer{
+        padding-top: 60px;
+        margin: auto;
+        font-size: 15px;
+    }
 }
