@@ -1,33 +1,27 @@
-body{
-    background-color:  #ebedef;
-    padding: 0;
+*{
     margin: 0;
-}
-html{
-    scroll-behavior: smooth;
-}
-hr{
-    color: black;
-    border: 1px solid;
-}
-footer{
-    text-align: center;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #071616;
 }
-@keyframes bgcolor{
-    from{background-color: #0b1a2c;}
-    to {background-color: #091130;}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    background-color: #f7f7f7;
 }
 section{
+    margin-top: 7rem;
     scroll-margin-top: 150px;
 }
+
 .navs{
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position:fixed;
     padding: 1 2;
     max-height: 120px;
     width: 100%;
@@ -44,406 +38,204 @@ section{
     margin-right: 30px;
     text-decoration: none;
     color: black;
+    font-size: 20px;
 }
 .menu a:hover{
     color: #010103;
     text-decoration: underline;
     text-decoration-color: red;
     text-decoration-style: solid;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 5px;
 }
 
 
-.greet-box{
-    width: min(90%, auto);
-    padding: 0 1rem;
-    margin-bottom: 280px;
+.home-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 1rem;
 }
-.greet-you{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #031728;
-    font-size: 80px;
-    animation: greetyou 2s ease-in;
-}
-@keyframes greetyou{
-    from{color: rgb(239, 238, 233);}
-    to {color: rgb(35, 80, 76);}
+.intro{
+    margin-left: 5rem;
+    text-align: left;
+    padding: 0 5rem;
 }
 .greet{
-    margin: auto;
-    text-align: center;
-    margin-top: 90px;
+    font-size: 3rem;
 }
-#short-desc{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #6b7272;
-    font-size: 30px;
+.introduce{
+    font-size: 6rem;
+    color:#211e1e
 }
-.html{
-    animation: JSSpan 1s ease;
-}
-@keyframes JSSpan{
-    from{color: rgb(246, 245, 240);}
-    to {color: rgb(189, 208, 207);}
-}
-.profile{
-    margin-top: 60px;
-    width: 100%;
-}
-.parent{
-    display: flex;
-    flex-wrap: wrap;
-}
-.child{
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    width: min(90%, 500px);
-    height: 600px;
-    background-color:  #091837;
-    text-align: center;
-    border: 5px solid;
-    border-radius: 30px;
-}
-#fpf{
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
-    border: 5px solid rgb(100, 254, 251);
-    border-radius: 50%;
-}
-#name{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    color: #64acfd;
-}
-#bio{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #64acfd;
-    font-size: 15px;
-}
-.tech-wrapper {
-    width: 100%;
-    overflow: hidden;
-    padding: 40px 0;
-}
-
-.grandson {
-    display: flex;
-    gap: 20px;
-    width: fit-content;
-    animation: scroll 15s linear infinite;
-}
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-.ts {
-    height: 80px;
-    width: auto;
-    margin: 0;
-    flex-shrink: 0;
-}
-#quote{
-    font-size: 1rem;
-    color: white;
-    margin: 40px;
-}
-#educ, #tech{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #64acfd;
-    text-shadow: 1px 1px seashell;
-}
-#educ{
-    margin-bottom: 40px;
-}
-.educ-box{
-    border-left: 3px solid #1191f9;
-    margin-left: 30%;
-}
-#education-line, #educ-year{
-    margin: 20px;
-    color: #64acfd;
-    font-size: 20px;
-    font-family:'Arial Narrow Bold', sans-serif;
-    text-align: left;
-
-}
-#educ-year{
-    font-size: 15px;
-}
-
-.project-div{
-    margin:auto;
-    gap: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width: min(100%, 1200px);
-}
-.project-box{
-    margin: auto;
-    border: 5px solid rgb(229, 215, 215);
-    height: 300px;
-    width: min(50%, 300px);
-    background-color: #c4bfd5;
-    border-radius: 5%;
-    text-align: center;
-}
-.project-box:hover{
-    background-color: #f5f5fb;
-    opacity: 30%;
-
-}
-.project-logo{
-    background:blue ;
-    height: 50%;
-    width: 70%;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 5%;
-}
-.project-text{
-    color:#070d0d;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.short-desc{
     font-size: 1.5rem;
 }
-.project-link{
-    margin: auto;
-    display: block;
-    background-color: #061919;
-    width: min(60%, 100px);
-    height: 30px;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    border: 2px solid #f5f7fa;
+.picture-me{
+    margin: 30px;
+    padding: 0 20px;
+}
+.my-picture img{
+    height: 500px;
+    width: auto;
+    border: 1px solid black;
     border-radius: 10px;
-    color: #a7b0b7;
+    filter: grayscale(50%);
 }
-.project-link:hover{
-    background-color: #0c192c;
-    opacity: 100%;
+.my-picture img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    filter: grayscale(0);
 }
-.certs{
-    text-align: center;
-}
-.certs-box{
-    margin: auto;
-    width: min(100%, auto);
+.about-me{
     display: flex;
-    overflow: auto;
-}
-.cert-img{
-    height: 300px;
-    width: min(90%, 600px);
-    margin: 20px;
-}
-
-.certs-box::-webkit-scrollbar{
-    height: 6px;
-
-}
-.certs-box::-webkit-scrollbar-thumb{
-    background-color: #0b2545;
-    border-radius: 60px;
-}
-
-.sec-name{
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 2.3rem;
-    color: #141919;
-}
-
-.contacts{
-    margin: 0;
-    padding: 0;
-
-}
-.contacts a{
-    margin-top: 10px;
-    margin: auto;
-    color: #f5f7fa;
-    text-decoration: none;
-    text-align: center;
-    background-color: #5f6498;
-    height: 80px;
-    width: min(20%,400px);
-    font-size: 0;
-    border: 2px solid white;
-    border-radius: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.contacts a:hover{
-    padding: 0 1rem;
-    background-color: #1ddede;
-    border-radius: 10px;
-    font-size: 30px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    
+    justify-content: space-between;
+    text-align: left;
+    gap: 3rem;
 }
-.contact-btn{
-    padding: 0;
-    margin: auto;
-    width: 100%;
+.my-profile-pic{
+    position:relative;
+    margin-left: 1rem;
+}
+.my-profile-pic img{
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.my-profile-pic img:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.my-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+
+}
+.profile-text{
+    margin: 5em 0px;
+}
+.name{
+    font-size: 3rem;
+    color: #000000;
+}
+.bio{
+    font-size: 1.5rem;
+}
+.front-name{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: red;
+}
+.skill{
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    margin:0;
 }
-.contact-icons{
-    margin: auto;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
+.skill-set{
+    background: #f7f7f7;
+    height: auto;
+    width: auto;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    border-radius: 10px;
+    
+}
+.skill-set:hover{
+    transform: scale(1.3);
+    transition: 0.5s ease-out;
+    box-shadow: 3px 3px 10px rgb(223, 208, 208);
+}
+.skill-set h1{
+    font-size: 20px;
+    font-weight: 100;
+}
+.skill-set img{
+    height: 40px;
+    width: auto;
 }
 
-
-@media(max-width: 600px){
-    body{
-        margin: 0;
-        padding: 0;
-    }
+@media only screen and (max-width: 600px){
     .navs{
+        padding: 1 2;
         max-height: 100px;
     }
-    .menu a{
-        margin-left: 0px;
-        text-decoration: none;
-        color: black;
-        font-size: 0.5em;
-    }
-    .greet-box{
-        padding: 0 1rem;
-    }
     .my-logo img{
-        display: block;
+        margin-left: 30px;
         height: 50px;
+        width: auto;
     }
-    .greet-you{
-        font-size: 3rem;
+    .menu a{
+        margin-right: 5px;
+        font-size: 15px;
     }
-    #short-desc{
+    .home-box{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+    .intro{
+        margin:auto;
+        padding: 0 0.5rem;
+    }
+    .greet{
         font-size: 1.5rem;
     }
-
-
-    .profile{
-        margin-top: 60px;
-        width: 100%;
+    .introduce{
+        font-size: 2.5rem;
+        color:#211e1e
     }
-    .child{
-        margin-top: 20px;
-        width: 80%;
+    .short-desc{
+        font-size: 1rem;
+    }
+    .picture-me{
+        margin: auto;
+        padding: 10px 20px;
+    }
+    .my-picture img{
         height: 400px;
     }
-    #fpf{
-        margin-top: 20px;
-        width: 100px;
-        height: 100px;
-        border: 5px solid rgb(100, 254, 251);
-        border-radius: 50%;
-    }
-    #name{
-        font-size: 1em;
-        color: #d8e6f5;
-    }
-    #bio{
-        color: #64acfd;
-        font-size: 15px;
-    }
-    .tech-wrapper {
-        width: 100%;
-        overflow: hidden;
-        padding: 0 0;
-    }
-    #quote{
-        font-size: 1rem;
-    }
-    #educ, #tech{
-        font-size: 1/2rem;
-        margin-bottom: 20px;
-        color: #64acfd;
-        text-shadow: 1px 1px seashell;
-    }
-    #educ{
-        margin-bottom: 10px;
-    }
-    .educ-box{
-        border-left: 3px solid #1191f9;
-        margin-left: 30%;
-    }
-    #education-line, #educ-year{
-        margin: 10px;
-
-    }
-    #educ-year{
-        font-size: 15px;
-    }
-    .project-box{
-        height: 300px;
-        width: 80%;
-        border-radius: 5%;
-    }
-    .project-logo{
-        background:blue ;
-        height: 60%;
-        width: 90%;
-        margin: auto;
-        margin-top: 20px;
-        border-radius: 5%;
-    }
-    .project-text{
-        font-size: 1rem;
-    }
-    .project-link{
-        font-size: 1rem;
-        border-radius: 10px;
-    }
-
-    .cert-img{
-        height: 200px;
-        width: 90%;
-        margin: 20px;
-    }
-
-    .contacts{
-        margin: auto;
-    }
-    .contacts a{
-        margin: auto;
-        height: 50px;
-        font-size: 0px;
-        width: auto;
-
-    }
-    .contacts a:hover{
-        background-color: #1ddede;
-        font-size: 10px;
+    .about-me{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 3em;
-        
+        flex-wrap: wrap;
     }
-    .contact-btn{
-        height: 10px;
-        width: 100%;
+    .my-profile-pic{
+        position:relative;
+        margin:auto;
+    }
+    .my-profile-pic img{
+        height: 400px;
+    }
+    .profile-text{
+        margin:auto;
+    }
+    .name{
+        font-size: 2rem;
+        color: #000000;
+    }
+    .bio{
+        font-size: 1rem;
+    }
+    .front-name{
+
+        font-size: 1.5rem;
 
     }
-    .contact-icons{
-        height: 50px;
-        width: 50px;
+    .skill{
+        gap: 0px;
+        margin: auto;
+        padding: 0;
     }
-    footer{
-        padding-top: 60px;
-        font-size: 15px;
+    .skill-set h1{
+        font-size: 10px;
+        font-weight: 100;
+    }
+    .skill-set img{
+        height: 20px;
+        width: auto;
     }
 }
