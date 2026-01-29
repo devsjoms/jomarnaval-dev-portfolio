@@ -13,13 +13,16 @@
             <div class="my-logo">
                 <a href="#home"><img src="my_logo/my-logo.png" alt="My Logo"></a>
             </div>
-            <nav class="menu">
-                <a href="#home">Home</a>
-                <a href="#about-me">About me</a>
-                <a href="#projects">Projects</a>
-                <a href="#certificate">Certificates</a>
-                <a href="#contact">Contact</a>
+            <div id="menu" onclick="flexNav()">
+                <nav class="menu"  >
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about-me" class="nav-link">About me</a>
+                <a href="#projects" class="nav-link" >Projects</a>
+                <a href="#certificate" class="nav-link" >Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
+            </div>
+            
     </header>
 
     <section id="home">
@@ -45,8 +48,8 @@
             </div>
             <div class="my-info">
                 <div class="profile-text">
-                    <h1 class="name">JOMAR NAVAL</h1>
-                    <p class="bio">A second year Information Technology student at Batangas State University ARASOF - Nasugbu Campus</p>
+                    <h1 class="name">Jomar Naval</h1>
+                    <p class="bio">A second-year Information Technology student at Batangas State University – ARASOF Nasugbu Campus, focused on building a solid foundation in web development and modern technologies.</p>
 
                 </div>
                 <h1 class="front-name">SKILLS</h1>
@@ -88,7 +91,7 @@
                 <img src="project logos/image.png" alt="Login system">
             </div>
             <div class="box-child">
-
+                <img src="project logos/image.png" alt="">
             </div>
             <div class="box-child">
 
@@ -99,16 +102,116 @@
     </section>
 
     <section id="certificate">
-
+        <h1 class="certification-text">My Certifications:<span> A showcase of completed courses and verified learning achievements.</span></h1>
+        <div class="cert-box">
+            <div class="certs">
+                <div class="img-text"><p>I earned a certification in Scientific Computing with Python from freeCodeCamp, where I gained a solid foundation in Python programming. This includes problem-solving, working with data, and understanding basic computational concepts essential for software development.</p></div>
+                <img src="Certificates/scientific_computing_FCC.png" alt="certificate">
+            </div>
+            <div class="certs">
+                <div class="img-text"><p>I completed the CCNA: Introduction to Networks course through Batangas State University – ARASOF Campus, which strengthened my knowledge of networking fundamentals such as network devices, connectivity, and basic network configuration.</p></div>
+                <img src="Certificates/ccna_CN1.jpeg" alt="certificate">
+            </div>
+            <!--
+            <div class="certs">
+                <img src="Certificates/softEngr.png" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/hrPyBasic.png" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/py.png" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/pyinter.jpg" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/pydev.jpg" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/java.jpg" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/cpp.png" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/ml.jpg" alt="certificate">
+            </div>
+            <div class="certs">
+                <img src="Certificates/DA_With_AI.jpg" alt="certificate">
+            </div>-->
+        </div>
     </section>
 
     <section id="contact">
-
+        <div class="contact-container">
+            <div class="submit-form">
+                <form action="#">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name">
+                    <label for="user-email">Email</label>
+                    <input type="email" name="Email" id="user-email" placeholder="Enter your email">
+                    <label for="message-box">Message</label>
+                    <textarea name="text" id="message-box" placeholder="send me a message..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="contact-information">
+                <div class="contact-parent-box">
+                    <h1 class="connect-text">Let's Connect!</h1>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="icons/fb.png" alt="">
+                    </div>
+                    <div class="contact-text">
+                        <h1>Facebook</h1>
+                        <p>facebook.com/kotsjoms</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="icons/google.png" alt="">
+                    </div>
+                    <div class="contact-text">
+                        <h1>Google</h1>
+                        <p>jomarnaval.dev@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="icons/github.png" alt="">
+                    </div>
+                    <div class="contact-text">
+                        <h1>Github</h1>
+                        <p>github.com/devsjoms</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="icons/mobile.png" alt="">
+                    </div>
+                    <div class="contact-text">
+                        <h1>Mobile-Number</h1>
+                        <p>0997-618-7783</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+        
     </section>
 
     <footer>
         <hr>
+        <div class="contact-footer">
+            <a href="https://facebook.com/kotsjoms"><img src="icons/fb.png" alt="facebook-contact"></a>
+            <a href="mailto:jomarnaval.dev@gmail.com"><img src="icons/google.png" alt="email=contact"></a>
+            <a href="https://github.com/devsjoms"><img src="icons/github.png" alt="github-profile"></a>
+        </div>
+        
         <p>Jomar Naval @ 2026</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

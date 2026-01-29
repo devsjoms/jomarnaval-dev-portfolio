@@ -11,6 +11,10 @@ body{
     align-items: center;
     background-color: #f7f7f7;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 section{
     margin-top: 7rem;
     scroll-margin-top: 150px;
@@ -117,10 +121,13 @@ section{
     margin: 5em 0px;
 }
 .name{
-    font-size: 3rem;
+    font-weight: 550;
+    font-size: 4rem;
     color: #000000;
+    margin: 1rem 0;
 }
 .bio{
+    margin: 1rem 0;
     font-size: 1.5rem;
 }
 .front-name{
@@ -132,8 +139,8 @@ section{
 .skill{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    margin:0;
+    gap: 10px;
+    margin:auto;
 }
 .skill-set{
     background: #f7f7f7;
@@ -144,7 +151,7 @@ section{
     padding-bottom: 0.5rem;
     border-radius: 10px;
     transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
-    
+    margin: auto;
 }
 .skill-set:hover{
     background-color: #f7f7f725;
@@ -203,19 +210,164 @@ section{
     height: 200px;
     width: 100%;
 }
+#certificate{
+    width: 100%;
+    padding: 5rem 0;
+}
+.certification-text{
+    font-weight: 600;
+    font-size: 3rem;
+    padding: 2rem 3rem;
+
+}
+.certification-text span{
+    color: red;
+}
+.cert-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 5we0px 20px;
+    padding: 1rem;
+}
+.certs{
+    margin: 10px auto;
+    border: 1px solid;
+    height: auto;
+    padding: 0;
+    transition: transform 0.6s ease-in-out;
+}
+.certs:hover{
+    transform: scale(1.1);
+}
+.certs:hover .img-text{
+    background: #00000080;
+    display: block;
+    color: white;
+}
+.certs img{
+    height: 300px;
+    width: 400px;
+}
+.img-text{
+    position: absolute;
+    width: 380px;
+    padding: 100px 10px;
+    display: none;
+}
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    
+}
+.contact-parent-box{
+    width: 100%;
+}
+.contact-information{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #e9c3c375;
+    padding: 110px 70px;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+}
+.box-greet{
+    display:block;
+    grid-column: 2;
+}
+.connect-text{
+    padding: 5rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgb(1, 0, 0);
+}
+
+.contact-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+.contact-icon img{
+    height: 50px;
+}
+.contact-text{
+    text-align: left;
+}
+.contact-text h1{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.submit-form{
+    padding: 5rem;
+    width: 30%;
+    margin: auto;
+}
+form{
+    margin: auto;
+    display: grid;
+    grid-column: auto;
+}
+label{
+    
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+}
+#name{
+    padding: 0 0 0 6px;
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 4px;
+}
+#user-email{
+    padding: 0 0 0 6px;
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 4px;
+}
+#message-box{
+    padding: 8px 0 0 6px;
+    height: 300px;
+    border-radius: 4px;
+}
+button{
+    margin-top: 20px;
+    height: 40px;
+    width: 90px;
+}
 @media only screen and (max-width: 600px){
-    .navs{
-        padding: 1 2;
-        max-height: 100px;
-    }
     .my-logo img{
         margin-left: 30px;
         height: 50px;
         width: auto;
     }
-    .menu a{
-        margin-right: 5px;
-        font-size: 15px;
+    #menu{
+        background-color: #ca1717;
+        width: 90px;
+        height: 50px;
+        position: sticky;
+        right: 50px;
+        margin: 0;
+        
+    }
+    .nav-link {
+        display: none;
+        text-align: center;
+    }
+
+    .nav-link.open {
+        display: flex;
+        width: 400px;
+        background-color: red;
+        margin: 10px;
+        
     }
     .home-box{
         display: flex;
@@ -282,4 +434,57 @@ section{
         height: 20px;
         width: auto;
     }
+    footer{
+        display: inline;
+        width: 100%;
+
+    }
+    footer div{
+        display: block;
+        position: absolute;
+        width: 100%;
+        padding: 100px;
+    }
+    footer a{
+        margin: 0px;
+    }
+    .box-child{
+        width: 50%;
+        height: auto;
+        opacity: 100%;
+    }
+    .certification-text{
+        font-size: 2rem;
+    }
+    .cert-box{
+        flex-wrap: nowrap;
+        overflow: auto;
+        gap: 20px
+    }
+    .certs img{
+        height: 150px;
+        width: 200px;
+    }
+
+}
+
+
+
+.contact-footer{
+    display: block;
+    position:absolute;
+    left: 0;
+    bottom: 0.1;
+    text-align:left;
+    width: min(50%,200px);
+    padding: 10px 5px;
+    gap: 5px;
+}
+.contact-footer img{
+    height: 20px;
+    margin: 0 10px;
+}
+footer p{
+    text-align: center;
+    padding-top: 20px;
 }
