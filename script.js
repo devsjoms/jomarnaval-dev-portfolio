@@ -5,3 +5,7 @@ function flexNav() {
     link.classList.toggle('open');
   });
 }
+
+function notReady(){
+  alert("not available for now.")
+}
