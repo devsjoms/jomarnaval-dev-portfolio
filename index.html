@@ -11,15 +11,16 @@
         
     <header class="navs">
             <div class="my-logo">
-                <a href="#home"><img src="my_logo/my-logo.png" alt="My Logo"></a>
+                <h1>J<span>C</span><span>N</span></h1>
             </div>
             <div id="menu" onclick="flexNav()">
-                <nav class="menu"  >
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about-me" class="nav-link">About me</a>
-                <a href="#projects" class="nav-link" >Projects</a>
-                <a href="#certificate" class="nav-link" >Certificates</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                
+                <nav class="menu">
+                <a href="#home" class="nav-link" id="nav1">Home</a>
+                <a href="#about-me" class="nav-link" id="nav2">About me</a>
+                <a href="#projects" class="nav-link" id="nav3">Projects</a>
+                <a href="#certificate" class="nav-link" id="nav4">Certificates</a>
+                <a href="#contact" class="nav-link" id="nav5">Contact</a>
             </nav>
             </div>
             
@@ -29,15 +30,15 @@
         <div class="home-box">
             <div class="intro">
                 <h2 class="greet">Hi, I'm</h2>
-                <h1 class="introduce">Jomar.</h1>
+                <h1 class="introduce" id="introduce">Jomar.</h1>
                 <p class="short-desc">A student and aspiring web developer, currently learning the fundamentals of web development such as HTML, CSS, and JavaScript. I’m passionate about improving my skills and excited to learn more technologies as I continue my journey in web development.</p>
             </div>
+
             <div class="picture-me">
                 <div class="my-picture">
                     <img src="my-images/img1.jpg" alt="">
                 </div>
-            </div>
-            
+            </div> 
         </div>
     </section>
 
@@ -146,7 +147,7 @@
     <section id="contact">
         <div class="contact-container">
             <div class="submit-form">
-                <form action="#">
+                <form>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="available soon...">
                     <label for="user-email">Email</label>
@@ -205,7 +206,7 @@
     <footer>
         <hr>
         <div class="contact-footer">
-            <a href="https://facebook.com/kotsjoms"><img src="icons/fb.png" alt="facebook-contact"></a>
+            <a href="https://facebook.com/kotsjoms.23" target="_blank"><img src="icons/fb.png" alt="facebook-contact"></a>
             <a href="mailto:jomarnaval.dev@gmail.com"><img src="icons/google.png" alt="email=contact"></a>
             <a href="https://github.com/devsjoms"><img src="icons/github.png" alt="github-profile"></a>
         </div>
