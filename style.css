@@ -322,14 +322,14 @@ section{
     font-size: 1.5rem;
 }
 .submit-form{
-    padding: 0 0 0 10%;
-    width: 60%;
+    padding: 0 0 0 0;
+    width: 50%;
     margin: 0;
 }
 form{
-    margin: 0;
+    margin: auto;
     display: grid;
-    grid-column: auto;
+    grid-column: 10;
 }
 label{
     
@@ -338,14 +338,14 @@ label{
     text-align: left;
 }
 #name,#user-email{
-    padding: 0 0 0 6px;
+    padding: 5px 0 0 6px;
     margin-bottom: 30px;
     width: 500px;
     height: 40px;
     border-radius: 4px;
 }
 #message-box{
-    padding: 0 0 0 6px;
+    padding: 5px 0 0 6px;
     height: 300px;
     width: 500px;
     border-radius: 4px;
@@ -438,7 +438,7 @@ button{
         padding: 10px 20px;
     }
     .my-picture img{
-        height: 400px;
+        height: 300px;
     }
     .about-me{
         display: flex;
@@ -449,7 +449,7 @@ button{
         margin:auto;
     }
     .my-profile-pic img{
-        height: 400px;
+        height: 300px;
     }
     .profile-text{
         margin:auto;
@@ -457,6 +457,7 @@ button{
     .name{
         font-size: 2rem;
         color: #000000;
+        text-align: center;
     }
     .bio{
         font-size: 1rem;
@@ -467,7 +468,7 @@ button{
 
     }
     .skill{
-        gap: 0px;
+        gap: 5px;
         margin: auto;
         padding: 0;
     }
@@ -476,7 +477,7 @@ button{
         font-weight: 100;
     }
     .skill-set img{
-        height: 20px;
+        height: 30px;
         width: auto;
     }
     footer{
@@ -512,12 +513,15 @@ button{
         width: 200px;
     }
     .submit-form{
-        padding: 0 0 0 20%;
-        width: 60%;
-        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin: auto;
+    }form{
+        margin: auto;
     }
     label{
-    
+        margin-left: 9%;
+        padding: 10px 0;
         font-weight: 100;
         font-size: 20px;
         text-align: left;
@@ -525,15 +529,20 @@ button{
     #name,#user-email{
         padding: 0 0 0 6px;
         margin-bottom: 30px;
-        width: 300px;
+        width: 80%;
         height: 40px;
         border-radius: 4px;
+        margin: auto;
+    }
+    button{
+        margin-left: 9%;
     }
     #message-box{
         padding: 0 0 0 6px;
         height: 300px;
-        width: 300px;
+        width: 80%;
         border-radius: 4px;
+        margin: auto;
     }
     .contact-container{
         display: grid;
