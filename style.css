@@ -268,19 +268,55 @@ section{
 }
 
 .certs img{
-    height: 300px;
-    width: 400px;
+    height: 400px;
+    width: auto;
 }
 
 .contact-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
+    margin: 0;
+    width: 100%;
+
     
 }
-.contact-parent-box{
-    width: 100%;
+
+.submit-form{
+    width: 50%;
+    margin: 0;
+
+}
+form{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-column: 10;
+
+}
+label{
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+}
+#name,#user-email{
+    padding: 2px 0 0 6px;
+    margin: 0 0 10px 0;
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+#message-box{
+    padding: 5px 0 0 6px;
+    height: 300px;
+    width: 90%;
+    border-radius: 4px;
+}
+button{
+    margin-top: 20px;
+    height: 40px;
+    width: 90px;
 }
 .contact-information{
     display: flex;
@@ -292,12 +328,12 @@ section{
     width: 50%;
     height: 100%;
 }
-.box-greet{
-    display:block;
-    grid-column: 2;
+.contact-parent-box{
+    width: 100%;
 }
+
 .connect-text{
-    padding: 5rem;
+    padding: 0;
     font-size: 3rem;
     font-weight: 800;
     color: rgb(1, 0, 0);
@@ -307,8 +343,8 @@ section{
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 300px;
-    padding: 10px 20px;
+    width: 60%;
+    padding: 0;
     margin: 10px 0;
 }
 .contact-icon img{
@@ -320,40 +356,6 @@ section{
 .contact-text h1{
     font-weight: 300;
     font-size: 1.5rem;
-}
-.submit-form{
-    padding: 0 0 0 0;
-    width: 50%;
-    margin: 0;
-}
-form{
-    margin: auto;
-    display: grid;
-    grid-column: 10;
-}
-label{
-    
-    font-weight: 100;
-    font-size: 20px;
-    text-align: left;
-}
-#name,#user-email{
-    padding: 5px 0 0 6px;
-    margin-bottom: 30px;
-    width: 500px;
-    height: 40px;
-    border-radius: 4px;
-}
-#message-box{
-    padding: 5px 0 0 6px;
-    height: 300px;
-    width: 500px;
-    border-radius: 4px;
-}
-button{
-    margin-top: 20px;
-    height: 40px;
-    width: 90px;
 }
 @media only screen and (max-width: 600px){
     *{
