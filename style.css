@@ -11,6 +11,11 @@ body{
     align-items: center;
     background-color: #f7f7f7;
 }
+body.no-scroll {
+    overflow: hidden;
+    position: fixed; 
+    width: 100%;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -357,6 +362,40 @@ button{
     font-weight: 300;
     font-size: 1.5rem;
 }
+.msg-box{
+    z-index: 1000;
+    display: none;
+    position:fixed;
+    width: 30%;
+    height: 30%;
+    background-color: #faf0f0;
+    margin: auto;
+    top: 40%;
+    left: 35%;
+    border: 2px solid;
+}
+.hdr{
+    display:flex;
+    background-color: #000000;
+    
+}
+.hdr button{
+    width: 10%;
+    height: 10%;
+    margin: 10px;
+    margin-left: auto;
+}
+.cnt{
+    display: flex;
+    padding: 20px;
+    height: 50%;
+    width: 90%;
+    margin: auto;
+}
+.cnt p{
+    font-size: 20px;
+    word-spacing:2%;
+}
 @media only screen and (max-width: 600px){
     *{
         margin: 0;
@@ -390,7 +429,6 @@ button{
         display: block;
         color: aliceblue;
         font-weight: 200;
-        font-size: 20px;
         padding: 7px 0 5px 0;
         
     }
@@ -411,9 +449,11 @@ button{
     @keyframes shownav {
         from{
             height: 0%;
+            font-size: 0px;
         }
         to{
             height: 60%;
+            font-size: 20px;
         }
     }
     .home-box{
@@ -497,10 +537,16 @@ button{
     footer a{
         margin: 0px;
     }
+    .parent-box{
+        display:grid;
+
+    }
+
     .box-child{
-        width: 50%;
-        height: auto;
-        opacity: 100%;
+        position: relative;
+        margin: auto;
+        width: 80%;
+        height: 200px;
     }
     .certification-text{
         font-size: 2rem;
@@ -560,11 +606,20 @@ button{
         margin-top: 30px;
         display: grid;
         padding: 0;
-        width: 100%;
+        width:100vw;
         height: fit-content;
     }
     .contact-card{
-        width: fit-content;
+        width: 100%;
+    }
+    .msg-box{
+        position:fixed;
+        width: 80%;
+        height: 20%;
+        background-color: #faf0f0;
+        margin: auto;
+        top: 35%;
+        left: 10%;
     }
 }
 
@@ -586,3 +641,5 @@ footer p{
     text-align: center;
     padding-top: 20px;
 }
+
+
