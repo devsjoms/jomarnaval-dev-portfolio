@@ -11,11 +11,6 @@ body{
     align-items: center;
     background-color: #f7f7f7;
 }
-body.no-scroll {
-    overflow: hidden;
-    position: fixed; 
-    width: 100%;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -74,9 +69,9 @@ section{
     color: red;
 }
 .intro{
-    margin-left: 5rem;
+    margin-left: 1rem;
     text-align: left;
-    padding: 0 5rem;
+    padding: 0 2rem;
 }
 .greet{
     font-size: 3rem;
@@ -130,7 +125,7 @@ section{
 }
 .my-profile-pic{
     position:relative;
-    margin-left: 1rem;
+    margin: 3rem;
 }
 .my-profile-pic img{
     height: 500px;
@@ -144,7 +139,7 @@ section{
 .my-info{
     display: flex;
     flex-direction: column;
-    padding: 0 3rem;
+    padding: 0 2rem;
 
 }
 .profile-text{
@@ -180,7 +175,7 @@ section{
     padding: 1rem;
     padding-bottom: 0.5rem;
     border-radius: 10px;
-    transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+    transition: transform 0.2s ease-in-out, filter 0.6s ease-in-out;
     margin: auto;
 }
 .skill-set:hover{
@@ -216,29 +211,38 @@ section{
 .box-child{
     position: relative;
     margin: auto;
-    width: 20%;
-    height: 200px;
-    background-color: #000000;
-    opacity: 70%;
-    border-radius: 10px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    font-size: 0;
+    width: 40%;
+    height: 250px;
+    font-size:small;
+    border: 1px solid;
     transition: transform 0.6s ease-in-out;
-
-}
-.box-child:hover{
-    transform: scale(1.1);
-    transition: 1s ease ;
-    opacity: 60%;
-    background-color: #bebedd9f;
-    font-size: 12px;
 }
 
 .box-child img{
     display: block;
-    height: 200px;
+    height: 100%;
     width: 100%;
+}
+.box-child p{
+    color: #010000;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    margin: 20px;
+    word-spacing: 0%;
+}
+.box-child:hover p{
+    opacity: 1;
+    transition: 0.5 ease;
+}
+.box-child:hover img{
+    opacity: 0.1;
+}
+.box-child:hover{
+    z-index: 1;
+    transform: scale(1.03);
+    transition: 0.5s ease ;
 }
 #certificate{
     width: 100%;
@@ -285,6 +289,12 @@ section{
     width: 100%;
 
     
+}
+.contact-container.no-scroll{
+    position: fixed;
+    width: 100%;
+    top:0;
+    overflow: auto;
 }
 
 .submit-form{
@@ -430,7 +440,7 @@ button{
         color: aliceblue;
         font-weight: 200;
         padding: 7px 0 5px 0;
-        
+        font-size: 20px;
     }
     .nav-link.open {
         position: relative;
@@ -548,6 +558,10 @@ button{
         width: 80%;
         height: 200px;
     }
+    .box-child p{
+        margin:10%;
+        font-size: 12px;
+    }
     .certification-text{
         font-size: 2rem;
     }
@@ -621,6 +635,7 @@ button{
         top: 35%;
         left: 10%;
     }
+    .cnt p{font-size: 15px;}
 }
 
 .contact-footer{
