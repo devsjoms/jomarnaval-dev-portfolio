@@ -103,7 +103,7 @@
                 <p>This is a web-based Login and Registration system developed using HTML, CSS, and JavaScript. The project demonstrates client-side authentication logic and user interface design for account creation and login validation. Currently, the system does not use a backend server or database; user credentials are temporarily stored in the browser's Local Storage, allowing one account session at a time. This project helped me better understand DOM manipulation, form validation, and browser storage handling.</p>
             </div>
         </div>
-    </section>
+    </section> 
 
     <section id="certificate">
         <h1 class="certification-text">My Certifications:<span> A showcase of completed courses and verified learning achievements.</span></h1>
@@ -148,14 +148,11 @@
     <section id="contact">
         <div class="contact-container">
             <div class="submit-form">
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="available soon...">
-                    <label for="user-email">Email</label>
-                    <input type="email" name="Email" id="user-email" placeholder="available soon...">
-                    <label for="message-box">Message</label>
-                    <textarea name="text" id="message-box" placeholder="not available right now"></textarea>
-                    <button type="button" onclick="notReady()">Submit</button>
+                <form id="contact-form">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="user-email" placeholder="Your Email" required>
+                    <textarea name="message" id="message-box" placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
                 </form>
             </div>
             
@@ -224,6 +221,8 @@
             <p>this feature is unfortunately unavailable, you can manually email me at : <a href="mailto:jomarnaval.dev@gmail.com">jomarnaval.dev@gmail.com</a></p>
         </div>
     </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
+</body>
+    
 </html>
