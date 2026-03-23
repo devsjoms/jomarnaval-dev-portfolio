@@ -31,8 +31,11 @@ setTimeout(()=>{
 (function () {
     emailjs.init("1fxDC0joc34IySljE");
 })();
-
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
 document.addEventListener("DOMContentLoaded", function () {
+  
   const form = document.getElementById("contact-form");
   form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -91,3 +94,12 @@ function nextImg(){
   }
   cert.src = certImages[currInd]
 }
+
+
+const projImages = ["project logos/image.png",
+  "project logos/jcnlp-web.png"
+]
+
+document.getElementById("proj-btn").addEventListener("click", () =>{
+  
+})
