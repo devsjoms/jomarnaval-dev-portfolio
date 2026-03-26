@@ -40,13 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
         event.preventDefault();
         emailjs.sendForm(
-            "service_ny3v9nx",
-            "template_vyz5nmg",
+            "service_xzi4w5f",
+            "template_a05q2qo",
             this
         ).then(function () {
+
             alert("Message sent successfully!");
         }).catch(function (error) {
             alert("Failed to send message.");
+            alert(error)
             console.error(error);
         });
 
@@ -67,12 +69,7 @@ const certImages = [
   "Certificates/scientific_computing_FCC.png",
   "Certificates/ccna_CN1.jpeg",
   "Certificates/softEngr.png",
-  "Certificates/hrPyBasic.png",
-  "Certificates/py.png",
-  "Certificates/pyinter.jpg",
   "Certificates/pydev.jpg",
-  "Certificates/java.jpg",
-  "Certificates/cpp.png",
   "Certificates/ml.jpg",
   "Certificates/DA_With_AI.jpg"
 ];
