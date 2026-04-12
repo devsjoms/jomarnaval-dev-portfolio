@@ -11,9 +11,11 @@ body{
     align-items: center;
     background-color: #f7f7f7;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 
 section{
     margin-top: 7rem;
@@ -33,11 +35,10 @@ section{
     top:0;
     background-color: transparent;
     box-shadow: none;
-
 }
 .navs.scrolled{
     background-color: #fff8f8;
-     box-shadow: 0 4px 5px #ffff 
+    box-shadow: 0 4px 5px #ffff 
 }
 #menu-text{
     display: none;
@@ -513,68 +514,34 @@ button{
         margin: auto;
         padding: 10px 20px;
     }
-    .my-picture img{
-        height: 300px;
-    }
-    .about-me{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .my-profile-pic{
-        position:relative;
-        margin:auto;
-    }
-    .my-profile-pic img{
-        height: 300px;
-    }
-    .profile-text{
-        margin:auto;
-    }
+    .my-picture img{height: 300px;}
+    .about-me{display: flex; flex-wrap: wrap;}
+    .my-profile-pic{ position:relative; margin:auto; }
+    .my-profile-pic img{ height: 300px;}
+    .profile-text{ margin:auto; }
     .name{
         font-size: 2rem;
         color: #000000;
         text-align: center;
     }
-    .bio{
-        font-size: 1rem;
-    }
-    .front-name{
-
-        font-size: 1.5rem;
-
-    }
+    .bio{ font-size: 1rem;}
+    .front-name{ font-size: 1.5rem; }
     .skill{
         gap: 5px;
         margin: auto;
         padding: 0;
     }
-    .skill-set h1{
-        font-size: 10px;
-        font-weight: 100;
-    }
-    .skill-set img{
-        height: 30px;
-        width: auto;
-    }
-    footer{
-        display: inline;
-        width: 100%;
-
-
-    }
+    .skill-set h1{font-size: 10px; font-weight: 100; }
+    .skill-set img{height: 30px; width: auto;}
+    footer{ display: inline; width: 100%;}
     footer div{
         display: block;
         position: absolute;
         width: 100%;
         padding: 100px;
     }
-    footer a{
-        margin: 0px;
-    }
-    .parent-box{
-        display:grid;
-
-    }
+    footer a{ margin: 0px; }
+    .parent-box{ display:grid; }
 
     .box-child{
         position: relative;
@@ -677,3 +644,54 @@ footer p{
 }
 
 
+/*TO STUDY*/
+/* Hide default checkbox */
+#mode {
+  display: none;
+}
+
+/* Label styling */
+.switch-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Toggle container */
+.switch {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+/* The circle with icon */
+.switch::before {
+  content: '🌞'; /* Sun for light mode */
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 21px;
+  font-size: 14px;
+  transition: transform 0.3s, content 0.3s;
+}
+
+/* Checked state (dark mode) */
+#mode:checked + .switch-label .switch {
+  background-color: #4caf50;
+}
+
+#mode:checked + .switch-label .switch::before {
+  transform: translateX(25px);
+  content: '🌙'; /* Moon for dark mode */
+}

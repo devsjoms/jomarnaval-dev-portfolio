@@ -35,7 +35,23 @@ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });
 document.addEventListener("DOMContentLoaded", function () {
-  
+  const mode = document.getElementById("mode");
+const allElements = document.querySelectorAll("*"); 
+
+mode.addEventListener("change", function() {
+  if (this.checked) {
+    allElements.forEach(el => {
+      el.style.backgroundColor = "#202020";
+      el.style.color = "white";
+      el.style.border = '1';
+    });
+  } else {
+    allElements.forEach(el => {
+      el.style.backgroundColor = "";
+      el.style.color = "";
+    });
+  }
+});
   const form = document.getElementById("contact-form");
   form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -91,12 +107,3 @@ function nextImg(){
   }
   cert.src = certImages[currInd]
 }
-
-
-const projImages = ["project logos/image.png",
-  "project logos/jcnlp-web.png"
-]
-
-document.getElementById("proj-btn").addEventListener("click", () =>{
-  
-})
