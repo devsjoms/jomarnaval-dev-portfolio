@@ -1,11 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 
-export default function handler(req, res) {
+module.exports = (req, res) => {
 
     if (req.method !== "POST") {
         return res.status(405).json({
-            message: "Method Not Allowed"
+            message: "Method not allowed"
         });
     }
 
@@ -13,20 +13,17 @@ export default function handler(req, res) {
 
     let messages = [];
 
-    // Read existing messages
     if (fs.existsSync(filePath)) {
-        const fileData = fs.readFileSync(filePath);
-        messages = JSON.parse(fileData);
+        const data = fs.readFileSync(filePath);
+        messages = JSON.parse(data);
     }
 
-    // Add new message
     messages.push(req.body);
 
-    // Save updated messages
     fs.writeFileSync(filePath, JSON.stringify(messages, null, 2));
 
     res.status(200).json({
         success: true,
         message: "Message saved!"
     });
-}
+};

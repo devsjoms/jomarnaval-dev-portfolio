@@ -1,134 +1,74 @@
-const navLinks = document.querySelectorAll(".nav-link");
-const navs = document.getElementsByClassName("nav-link");
-const myName = document.getElementById("introduce");
-const exit = document.getElementById("x-btn");
-const popUp = document.getElementById("msg-box");
-
-const body = document.body;
-
-exit.addEventListener('click',()=>{
-  popUp.style.display = "none";
-  body.classList.remove('no-scroll')
-})
-function notReady(){
-  popUp.style.display = "block";
-  body.classList.add('no-scroll')
-}
-function flexNav() {
-  navLinks.forEach(link => {
-    link.classList.toggle('open');
-  });
-}
-setTimeout(()=>{
-  myName.innerHTML = "Naval"
-},2000);
-
-setTimeout(()=>{
-  myName.innerHTML = "Jomar."
-},4000);
-
-
-(function () {
-    emailjs.init("1fxDC0joc34IySljE");
-})();
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
 document.addEventListener("DOMContentLoaded", function () {
+
   const mode = document.getElementById("mode");
-const allElements = document.querySelectorAll("*"); 
+  const allElements = document.querySelectorAll("*");
 
-mode.addEventListener("change", function() {
-  if (this.checked) {
-    allElements.forEach(el => {
-      el.style.backgroundColor = "#202020";
-      el.style.color = "white";
-      el.style.border = '1';
-    });
-  } else {
-    allElements.forEach(el => {
-      el.style.backgroundColor = "";
-      el.style.color = "";
+  if (mode) {
+    mode.addEventListener("change", function () {
+      allElements.forEach(el => {
+        el.style.backgroundColor = this.checked ? "#202020" : "";
+        el.style.color = this.checked ? "white" : "";
+      });
     });
   }
-});
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        emailjs.sendForm(
-            "service_xzi4w5f",
-            "template_a05q2qo",
-            this
-        ).then(function () {
 
-            alert("Message sent successfully!");
-        }).catch(function (error) {
-            alert("Failed to send message.");
-            alert(error)
-            console.error(error);
-        });
+  window.addEventListener("scroll", () => {
+    const nav = document.getElementsByClassName("navs")[0];
+    if (!nav) return;
 
-    });
-});
+    if (window.scrollY > 0) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
 
-window.addEventListener("scroll",() =>{
-  const isScrolled = document.getElementsByClassName("navs")[0];
-  if(window.scrollY > 0){
-    isScrolled.classList.add("scrolled");
-  }
-  else{
-    isScrolled.classList.remove("scrolled");
-  }
-});
+  const certImages = [
+    "Certificates/scientific_computing_FCC.png",
+    "Certificates/ccna_CN1.jpeg",
+    "Certificates/softEngr.png",
+    "Certificates/pydev.jpg",
+    "Certificates/ml.jpg",
+    "Certificates/DA_With_AI.jpg"
+  ];
 
-const certImages = [
-  "Certificates/scientific_computing_FCC.png",
-  "Certificates/ccna_CN1.jpeg",
-  "Certificates/softEngr.png",
-  "Certificates/pydev.jpg",
-  "Certificates/ml.jpg",
-  "Certificates/DA_With_AI.jpg"
-];
+  const cert = document.getElementById("crt");
+  let currInd = 0;
 
-const cert = document.getElementById("crt")
-let currInd = 0;
-
-function prevImg(){
-  if(currInd === 0){
-    currInd = certImages.length -1
-  }
-  currInd--;
-  cert.src = certImages[currInd]
-}
-function nextImg(){
-  currInd++;
-  if(currInd === certImages.length){
-    currInd = 0
-  }
-  cert.src = certImages[currInd]
-}
-
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const data = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("user-email").value,
-        message: document.getElementById("message-box").value,
-        date: new Date()
+  if (cert) {
+    window.prevImg = function () {
+      currInd = (currInd === 0) ? certImages.length - 1 : currInd - 1;
+      cert.src = certImages[currInd];
     };
 
-    const response = await fetch("/api/save-message", {
+    window.nextImg = function () {
+      currInd = (currInd + 1 === certImages.length) ? 0 : currInd + 1;
+      cert.src = certImages[currInd];
+    };
+  }
+
+  const form = document.getElementById("contact-form");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById("name")?.value,
+        email: document.getElementById("user-email")?.value,
+        message: document.getElementById("message-box")?.value,
+        date: new Date()
+      };
+
+      const response = await fetch("/api/save-message", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      alert(result.message);
     });
+  }
 
-    const result = await response.json();
-
-    alert(result.message);
 });
