@@ -43,7 +43,9 @@ section{
 #menu-text{
     display: none;
 }
-
+#menu-icon{
+    display: none;
+}
 .nav-link{
     margin-right: 30px;
     text-decoration: none;
@@ -432,196 +434,241 @@ button{
     word-spacing:2%;
 }
 @media only screen and (max-width: 600px){
+
     *{
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+
+    /* NAVBAR */
     .navs{
         height: 60px;
+        padding: 0 10px;
+        align-items: center;
     }
+
     .my-logo img{
-        margin-left: 30px;
-        height: 50px;
-        width: auto;
+        margin-left: 10px;
+        height: 45px;
     }
+
     .menu{
-        background-color: #170202;
-        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
         height: 40px;
-        position: sticky;
-        right: 10;
-        margin-right: 60px;
+        margin-right: 15px;
         border-radius: 6px;
         border: 2px solid red;
+        background-color: #170202;
+        cursor: pointer;
     }
-    .nav-link{
-        display: none;
-        text-align: center;
-    }
-    html{
-        scroll-behavior: smooth;
-    }
-    #menu-text{
-        display: block;
-        color: aliceblue;
-        font-weight: 200;
-        padding: 7px 0 5px 0;
-        font-size: 20px;
-    }
-    .nav-link.open {
-        position: relative;
+
+    #menu-icon{
+        color: white;
+        font-size: 24px;
         display: flex;
-        width: 150px;
-        background-color: red;
-        padding: 4px 3px;
-        right: 40px;
-        margin-right: 30px;
-        margin-top: 20px;
-        border: 2px solid ;
-        animation: shownav 1s ;
-        transition: 1s;
-        
     }
-    @keyframes shownav {
-        from{
-            height: 0%;
-            font-size: 0px;
+
+    /* NAV LINKS DROPDOWN */
+    .nav-links{
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    .nav-links.active{
+        display: flex;
+        animation: drop 0.3s ease;
+    }
+
+    .nav-link{
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+        margin: 0;
+        color: black;
+    }
+
+    .nav-link:hover{
+        background: #f2f2f2;
+    }
+
+    @keyframes drop {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
         }
-        to{
-            height: 60%;
-            font-size: 20px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
+
     .home-box{
         display: flex;
         flex-wrap: wrap;
-        padding: 0.5rem;
+        padding: 1rem;
+        text-align: center;
     }
+
     .intro{
-        margin:auto;
-        padding: 0 0.5rem;
+        margin: auto;
+        padding: 0 1rem;
     }
+
     .greet{
         font-size: 1.5rem;
     }
+
     .introduce{
-        font-size: 2.5rem;
-        color:#211e1e
+        font-size: 2.2rem;
+        color: #211e1e;
+        white-space: normal;
     }
+
     .short-desc{
         font-size: 1rem;
     }
+
     .picture-me{
         margin: auto;
-        padding: 10px 20px;
+        padding: 10px;
     }
-    .my-picture img{height: 300px;}
-    .about-me{display: flex; flex-wrap: wrap;}
-    .my-profile-pic{ position:relative; margin:auto; }
-    .my-profile-pic img{ height: 300px;}
-    .profile-text{ margin:auto; }
+
+    .my-picture img{
+        height: 250px;
+        width: auto;
+    }
+
+    /* ABOUT SECTION */
+    .about-me{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 2rem;
+    }
+    .my-profile-pic{
+        margin: auto;
+    }
+    .my-profile-pic img{
+        height: 250px;
+    }
+
     .name{
         font-size: 2rem;
-        color: #000000;
         text-align: center;
     }
-    .bio{ font-size: 1rem;}
-    .front-name{ font-size: 1.5rem; }
-    .skill{
-        gap: 5px;
-        margin: auto;
-        padding: 0;
-    }
-    .skill-set h1{font-size: 10px; font-weight: 100; }
-    .skill-set img{height: 30px; width: auto;}
-    footer{ display: inline; width: 100%;}
-    footer div{
-        display: block;
-        position: absolute;
-        width: 100%;
-        padding: 100px;
-    }
-    footer a{ margin: 0px; }
-    .parent-box{ display:grid; }
 
-    .box-child{
-        position: relative;
-        margin: auto;
-        width: 80%;
-        height: 200px;
+    .bio{
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 10px;
     }
-    .box-child p{
-        margin:10%;
+
+    /* SKILLS */
+    .skill{
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .skill-set h1{
         font-size: 12px;
     }
+
+    .skill-set img{
+        height: 30px;
+    }
+
+    /* PROJECTS */
+    .parent-box{
+        display: grid;
+        gap: 15px;
+    }
+
+    .box-child{
+        width: 90%;
+        height: 180px;
+    }
+
+    .box-child p{
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    /* CERTIFICATES */
     .certification-text{
         font-size: 2rem;
+        text-align: center;
     }
+
     .cert-box{
-        flex-wrap: nowrap;
-        overflow: auto;
-        gap: 20px;
+        gap: 15px;
     }
+
     .certs img{
-        height: 150px;
-        width: 200px;
+        height: 180px;
+        width: auto;
     }
-    .submit-form{
-        padding: 0;
-        width: 100%;
-        margin: auto;
-    }form{
-        margin: auto;
-    }
-    #name,#user-email{
-        padding: 0 0 0 6px;
-        
-        width: 80%;
-        height: 40px;
-        border-radius: 4px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-    button{
-        margin-left: 9%;
-    }
-    #message-box{
-        padding: 0 0 0 6px;
-        height: 300px;
-        width: 80%;
-        border-radius: 4px;
-        margin: auto;
-    }
+
+    /* CONTACT */
     .contact-container{
         display: grid;
-        height: fit-content;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .contact-parent-box{
         width: 100%;
     }
+
+    .submit-form{
+        width: 100%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    #name, #user-email, #message-box{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button{
+        width: 100%;
+        margin-left: 0;
+    }
+
     .contact-information{
-        margin-top: 30px;
+        width: 100%;
+        padding: 20px;
         display: grid;
-        padding: 0;
-        width:100vw;
-        height: fit-content;
     }
+
     .contact-card{
         width: 100%;
     }
+
     .msg-box{
-        position:fixed;
         width: 80%;
-        height: 20%;
-        background-color: #faf0f0;
-        margin: auto;
-        top: 35%;
         left: 10%;
+        top: 30%;
+        height: auto;
     }
-    #message-box { font-size: 20px;}
-    .cnt p{font-size: 15px;}
+
+    .cnt p{
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer p{
+        font-size: 12px;
+    }
 }
 
 .contact-footer{

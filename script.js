@@ -1,8 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
+const navLinks = document.querySelector(".nav-links");
+const menu = document.querySelector(".menu");
 
+function toggleMenu(){
+    navLinks.classList.toggle("active");
+}
+
+// close when clicking outside
+document.addEventListener("click", function (e) {
+    const isClickInsideMenu = menu.contains(e.target);
+    const isClickInsideNav = navLinks.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickInsideNav) {
+        navLinks.classList.remove("active");
+    }
+});
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
   const mode = document.getElementById("mode");
   const allElements = document.querySelectorAll("*");
-
   if (mode) {
     mode.addEventListener("change", function () {
       allElements.forEach(el => {
@@ -23,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Certificate slider
   const certImages = [
     "Certificates/scientific_computing_FCC.png",
     "Certificates/ccna_CN1.jpeg",
@@ -47,28 +68,26 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  const form = document.getElementById("contact-form");
+    emailjs.init("1fxDC0joc34IySljE");
 
-  if (form) {
-    form.addEventListener("submit", async (e) => {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const data = {
-        name: document.getElementById("name")?.value,
-        email: document.getElementById("user-email")?.value,
-        message: document.getElementById("message-box")?.value,
-        date: new Date()
-      };
-
-      const response = await fetch("/api/save-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+      emailjs.sendForm(
+        "service_nh0zh1e",
+        "template_stvcusz",
+        this
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        alert("Failed to send message.");
       });
-
-      const result = await response.json();
-      alert(result.message);
     });
-  }
 
 });

@@ -10,25 +10,24 @@
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
         
     <header class="navs">
-            <div class="my-logo">
+        <div class="my-logo">
                 <h1>J<span id="c">C</span><span id="n">N</span></h1>
                 
             </div>
-            <div id="menu" onclick="flexNav()">
-                
-                <nav class="menu">
-                    <h1 id="menu-text">menu</h1>
-                <a href="#home" class="nav-link" id="nav1">Home</a>
-                <a href="#about-me" class="nav-link" id="nav2">About me</a>
-                <a href="#projects" class="nav-link" id="nav3">Projects</a>
-                <a href="#certificate" class="nav-link" id="nav4">Certificates</a>
-                <a href="#contact" class="nav-link" id="nav5">Contact</a>
-            </nav>
+           <div class="menu" onclick="toggleMenu()">
+    <span id="menu-icon">☰</span>
+</div>
+
+<div class="nav-links">
+    <a class="nav-link" href="#home">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#projects">Projects</a>
+    <a class="nav-link" href="#contact">Contact</a>
+</div>
             </div>
             
     </header>
@@ -96,8 +95,9 @@
     <section id="projects">
         <h1 id="my-project">My Projects</h1>
         <div class="parent-box">
-            <button id="proj-btn" type="button">CHECK PROJECTS</button>
-            <!--<div class="box-child">
+            <p>My Projects are not available at this moment.</p>
+            <!--<button id="proj-btn" type="button">CHECK PROJECTS</button>
+            <div class="box-child">
                 <img src="project logos/image.png" alt="Login system">
                 <p>This project is a desktop-based Login and Registration system built using Python and the Tkinter GUI library. It features user authentication, account creation, input validation, and structured logic handling for user credentials. Through this project, I gained hands-on experience in GUI design, event-driven programming, and implementing authentication workflows in a Python-based environment.</p>
             </div>
@@ -155,8 +155,8 @@
         <div class="contact-container">
             <div class="submit-form">
                 <form id="contact-form">
-                    <input type="text" name="name" id="name" placeholder="Your Name" required>
-                    <input type="email" name="email" id="user-email" placeholder="Your Email" required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required autocomplete="name">
+                    <input type="email" name="email" id="user-email" placeholder="Your Email" required autocomplete="email">
                     <textarea name="message" id="message-box" placeholder="Message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
@@ -227,8 +227,7 @@
             <p>this feature is unfortunately unavailable, you can manually email me at : <a href="mailto:jomarnaval.dev@gmail.com">jomarnaval.dev@gmail.com</a></p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
     
